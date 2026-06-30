@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>SoftEmploy</h2>
+
+    <nav>
+      <a href="postulanteinicio.html">Inicio</a>
+      <a href="empleos.html">Empleos</a>
+      <a class="active" href="hoja-vida.html">Hoja de vida</a>
+      <a href="mensajespostulante.html">Mensajes</a>
+      <a href="notificacionespostulante.html">Notificaciones</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="login-postulante.html">Cerrar sesión</a>
+    </nav>
+  </aside>
+
+  <!-- CONTENIDO -->
+  <main class="main">
+
+    <header class="topbar">
+      <h3>Empleos disponibles</h3>
+    </header>
+
+    <!-- FILTROS -->
+    <section class="filters-box">
+
+      <input type="text" placeholder="Buscar empleo...">
+
+      <select>
+        <option>Todas las áreas</option>
+        <option>Desarrollo</option>
+        <option>Diseño</option>
+      </select>
+
+      <select>
+        <option>Ubicación</option>
+        <option>Remoto</option>
+        <option>Bogotá</option>
+      </select>
+
+      <button>Filtrar</button>
+
+    </section>
+
+    <!-- VACANTES -->
+    <section class="jobs-container">
+
+      <!-- JOB 1 -->
+      <div class="job-card">
+
+        <h3>Desarrollador Web</h3>
+        <p><strong>Empresa:</strong> TechSoft</p>
+        <p><strong>Ubicación:</strong> Remoto</p>
+
+        <div class="job-actions">
+          <button class="btn-view">Ver detalle</button>
+          <button class="btn-apply">Postularme</button>
+        </div>
+
+      </div>
+
+      <!-- JOB 2 -->
+      <div class="job-card">
+
+        <h3>Diseñador UI/UX</h3>
+        <p><strong>Empresa:</strong> Creative Studio</p>
+        <p><strong>Ubicación:</strong> Bogotá</p>
+
+        <div class="job-actions">
+          <button class="btn-view">Ver detalle</button>
+          <button class="btn-apply">Postularme</button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>

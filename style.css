@@ -1,0 +1,905 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #1f1f1f;
+}
+
+/* COLORES PRINCIPALES */
+:root {
+  --azul: #0b3d91;
+  --vinotinto: #7b0f2a;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--azul);
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-solid {
+  background: var(--azul);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-outline {
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 40px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+}
+
+.hero-text p {
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+/* imagen placeholder */
+.image-placeholder {
+  width: 350px;
+  height: 250px;
+  background: #ddd;
+  border-radius: 10px;
+}
+
+/* SEARCH */
+.search-box {
+  background: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.filters button {
+  background: var(--vinotinto);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  padding: 50px;
+}
+
+/* VINOTINTO SECTION */
+.mission {
+  display: flex;
+  justify-content: space-around;
+  background: var(--vinotinto);
+  color: white;
+  padding: 50px;
+}
+
+.mission-box {
+  width: 30%;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
+.login-body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fb;
+}
+
+/* CONTENEDOR */
+.login-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* IZQUIERDA */
+.login-left {
+  flex: 1;
+  background: #0b3d91;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-left h1 {
+  font-size: 28px;
+}
+
+/* DERECHA */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CAJA LOGIN */
+.login-box {
+  width: 80%;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+}
+
+.tab.active {
+  background: #7b0f2a; /* vinotinto */
+  color: white;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+form input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* BOTÓN */
+.btn-login {
+  margin-top: 20px;
+  padding: 10px;
+  background: #0b3d91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* LINKS */
+.links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.links a {
+  color: #0b3d91;
+  text-decoration: none;
+}
+.register-body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fb;
+}
+
+/* CONTENEDOR */
+.register-container {
+  display: flex;
+  width: 950px;
+  height: 550px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* LADO IZQUIERDO */
+.register-left {
+  flex: 1;
+  background: #7b0f2a; /* vinotinto */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* LADO DERECHO */
+.register-right {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-box {
+  width: 85%;
+}
+
+/* FILA */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row div {
+  flex: 1;
+}
+
+/* FORM */
+form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* BOTÓN */
+.btn-register {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #7b0f2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* LINK LOGIN */
+.login-link {
+  margin-top: 15px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.login-link a {
+  color: #0b3d91;
+  text-decoration: none;
+}
+/* DASHBOARD */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #0b3d91;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #7b0f2a;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  background: #f5f7fb;
+  padding: 20px;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* JOBS */
+.jobs h2 {
+  margin-bottom: 10px;
+}
+
+.job-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.job-card button {
+  margin-top: 10px;
+  background: #7b0f2a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.quick-action {
+  margin: 20px 0;
+}
+
+.quick-action a {
+  background: #7b0f2a;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form textarea {
+  resize: none;
+  height: 80px;
+}
+.vacante-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.vacante-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estado {
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+/* botones pro */
+.btn-view {
+  background: #0b3d91;
+}
+
+.btn-edit {
+  background: #f0a500;
+}
+
+.btn-delete {
+  background: #7b0f2a;
+}
+.postulaciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.postulacion-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.postulacion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background: #0b3d91;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-view {
+  background: #0b3d91;
+}
+
+.btn-accept {
+  background: #1e9e3e;
+}
+
+.btn-reject {
+  background: #7b0f2a;
+}
+
+.actions button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+.filters-box {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.filters-box input,
+.filters-box select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filters-box button {
+  background: #7b0f2a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.jobs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.job-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.job-actions button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-view {
+  background: #0b3d91;
+}
+
+.btn-apply {
+  background: #1e9e3e;
+}
+.cv-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cv-form h2 {
+  margin-top: 10px;
+  color: #0b3d91;
+}
+
+.cv-form input,
+.cv-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.cv-form textarea {
+  resize: none;
+  height: 80px;
+}
+.profile-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  font-size: 40px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+.chat-container {
+  display: flex;
+  height: 70vh;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* LISTA DE USUARIOS */
+.chat-list {
+  width: 30%;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.chat-user {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.chat-user.active {
+  background: #f0f0f0;
+}
+
+/* CHAT */
+.chat-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.messages {
+  padding: 15px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* MENSAJES */
+.msg {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 10px;
+  max-width: 60%;
+}
+
+.left {
+  background: #e5e5e5;
+  align-self: flex-start;
+}
+
+.right {
+  background: #7b0f2a;
+  color: white;
+  align-self: flex-end;
+}
+
+/* INPUT */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.chat-input button {
+  background: #0b3d91;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+}
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notif-card {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+/* =========================
+   RESPONSIVE GENERAL
+========================= */
+
+@media (max-width: 1024px) {
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .chat-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .chat-list {
+    width: 100%;
+  }
+
+  .chat-box {
+    width: 100%;
+  }
+
+  .filters-box {
+    flex-direction: column;
+  }
+
+}
+@media (max-width: 600px) {
+
+  .sidebar {
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .job-card, .vacante-card, .postulacion-card {
+    font-size: 14px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .login-container,
+  .register-container {
+    flex-direction: column;
+  }
+
+}
+/* =========================
+   TABS (Postulante / Empresa)
+========================= */
+
+.tab {
+  display: inline-block;
+  width: auto !important;
+  flex: none !important;
+
+  padding: 8px 30px;
+  font-size: 14px;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+  background: transparent;
+  color: #333;
+}
+
+/* Tab activo */
+.tab.active {
+  background: #0b3d91;
+  color: white;
+}
+
+/* Contenedor de tabs (evita que se estiren) */
+.tabs {
+  display: flex;
+  gap: 150px;
+  align-items: center;
+}
+
+/* Evita que botones dentro de tabs se estiren por forms o layouts */
+.tabs button {
+  width: auto !important;
+  flex: none !important;
+}
+.config-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.config-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.config-card h2 {
+  margin-bottom: 10px;
+  color: #0b3d91;
+}
+
+.config-card input,
+.config-card textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.config-card textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* BOTÓN GUARDAR */
+.btn-save {
+  background: #0b3d91;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
